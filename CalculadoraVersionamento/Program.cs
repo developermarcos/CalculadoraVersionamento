@@ -113,7 +113,7 @@ namespace CalculadoraVersionamento
 
             double resultado = primeiroValor * segundoValor;
 
-            string mensagem = $"Soma {primeiroValor} + {segundoValor} = {resultado}";
+            string mensagem = $"Multiplicação {primeiroValor} * {segundoValor} = {resultado}";
 
             Console.WriteLine(mensagem);
 
