@@ -63,7 +63,13 @@ namespace CalculadoraVersionamento
 
         private static void VisualizarOperacoes(List<string> calculos)
         {
-            Console.WriteLine("VisualizarOperacoes");
+            Console.WriteLine("Visualizar histórico de operacões");
+
+            foreach(var item in calculos)
+            {
+                Console.WriteLine(item);
+            }
+
             Console.ReadKey();
         }
 
