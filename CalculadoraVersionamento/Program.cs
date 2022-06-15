@@ -69,8 +69,7 @@ namespace CalculadoraVersionamento
 
         private static void Divisao(List<string> calculos)
         {
-            Console.WriteLine("Divisao");
-            Console.ReadKey();
+            
         }
 
         private static void Multiplicacao(List<string> calculos)
@@ -87,12 +86,15 @@ namespace CalculadoraVersionamento
 
         private static void Adicao(List<string> calculos)
         {
-            //double primeiroValor;
-            //double segundoValor;
+            double primeiroValor;
+            double segundoValor;
 
-            //ObterValores(out primeiroValor, out segundoValor);
+            ObterValores(out primeiroValor, out segundoValor);
 
-            Console.WriteLine("Adicao");
+            Console.WriteLine($"O resultado da operação de adição é: {primeiroValor + segundoValor}");
+
+            calculos.Add($"{primeiroValor} + {segundoValor} = {primeiroValor + segundoValor}");
+
             Console.ReadKey();
         }
 
