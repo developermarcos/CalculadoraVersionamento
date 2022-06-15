@@ -69,7 +69,28 @@ namespace CalculadoraVersionamento
 
         private static void Divisao(List<string> calculos)
         {
-            Console.WriteLine("Divisao");
+            double primeiroValor;
+            double segundoValor;
+
+            ObterValores(out primeiroValor, out segundoValor);
+
+            if (segundoValor == 0)
+            {
+
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Não é possível dividir por 0!");
+                Console.ResetColor();
+
+            }
+            else
+            {
+
+                Console.WriteLine($"O resultado da operação de divisão é: {primeiroValor / segundoValor}");
+
+                calculos.Add($"{primeiroValor} / {segundoValor} = {primeiroValor + segundoValor}");
+
+            }
+
             Console.ReadKey();
         }
 
