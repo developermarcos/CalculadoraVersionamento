@@ -28,19 +28,19 @@ namespace CalculadoraVersionamento
                 switch (opcao)
                 {
                     case "1":
-                        Adicao();
+                        Adicao(calculos);
                         break;
                     case "2":
-                        Subtracao();
+                        Subtracao(calculos);
                         break;
                     case "3":
-                        Multiplicacao();
+                        Multiplicacao(calculos);
                         break;
                     case "4":
-                        Divisao();
+                        Divisao(calculos);
                         break;
                     case "5":
-                        VisualizarOperacoes();
+                        VisualizarOperacoes(calculos);
                         break;
                     default:
                         Console.WriteLine("Opção não encontrada, pressione enter para voltar ao menu.");
@@ -61,31 +61,31 @@ namespace CalculadoraVersionamento
             segundoNumero =Convert.ToDouble(Console.ReadLine());
         }
 
-        private static void VisualizarOperacoes()
+        private static void VisualizarOperacoes(List<string> calculos)
         {
             Console.WriteLine("VisualizarOperacoes");
             Console.ReadKey();
         }
 
-        private static void Divisao()
+        private static void Divisao(List<string> calculos)
         {
             Console.WriteLine("Divisao");
             Console.ReadKey();
         }
 
-        private static void Multiplicacao()
+        private static void Multiplicacao(List<string> calculos)
         {
             Console.WriteLine("Multiplicacao");
             Console.ReadKey();
         }
 
-        private static void Subtracao()
+        private static void Subtracao(List<string> calculos)
         {
             Console.WriteLine("Subtração");
             Console.ReadKey();
         }
 
-        private static void Adicao()
+        private static void Adicao(List<string> calculos)
         {
             //double primeiroValor;
             //double segundoValor;
