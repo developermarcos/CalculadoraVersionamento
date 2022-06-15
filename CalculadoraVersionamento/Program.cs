@@ -69,7 +69,8 @@ namespace CalculadoraVersionamento
 
         private static void Divisao(List<string> calculos)
         {
-            
+            Console.WriteLine("Divisao");
+            Console.ReadKey();
         }
 
         private static void Multiplicacao(List<string> calculos)
