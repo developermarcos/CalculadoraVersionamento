@@ -96,7 +96,23 @@ namespace CalculadoraVersionamento
 
         private static void Multiplicacao(List<string> calculos)
         {
-            Console.WriteLine("Multiplicacao");
+            Console.Clear();
+
+            Console.WriteLine("Informe os valores para o calculo de multiplicação");
+
+            double primeiroValor;
+            double segundoValor;
+
+            ObterValores(out primeiroValor, out segundoValor);
+
+            double resultado = primeiroValor * segundoValor;
+
+            string mensagem = $"Soma {primeiroValor} + {segundoValor} = {resultado}";
+
+            Console.WriteLine(mensagem);
+
+            calculos.Add(mensagem);
+
             Console.ReadKey();
         }
 
