@@ -81,7 +81,18 @@ namespace CalculadoraVersionamento
 
         private static void Subtracao(List<string> calculos)
         {
-            Console.WriteLine("Subtração");
+            double primeiroValor; 
+            double segundoValor;
+
+            ObterValores( out primeiroValor, out segundoValor);
+
+            double valor = primeiroValor - segundoValor;                     
+
+            string resultado = $"O Resultado da Subtração de {primeiroValor} - {segundoValor} deu = {valor} ";
+
+            calculos.Add(resultado);
+
+            Console.WriteLine(resultado);
             Console.ReadKey();
         }
 
