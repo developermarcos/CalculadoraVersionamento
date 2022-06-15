@@ -25,6 +25,9 @@ namespace CalculadoraVersionamento
                 Console.Write("Opção: ");
                 opcao = Console.ReadLine();
 
+                if (opcao.ToUpper() == "S")
+                    break;
+
                 switch (opcao)
                 {
                     case "1":
@@ -48,8 +51,6 @@ namespace CalculadoraVersionamento
                         break;
                 }
                 #endregion
-
-                
             }
         }
 
