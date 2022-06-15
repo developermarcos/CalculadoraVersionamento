@@ -56,10 +56,26 @@ namespace CalculadoraVersionamento
 
         private static void ObterValores(out double primeiroNumero, out double segundoNumero)
         {
-            Console.Write($"Digite o primeiro número: ");
-            primeiroNumero =Convert.ToDouble(Console.ReadLine());
-            Console.Write($"Digite o segundo número: ");
-            segundoNumero =Convert.ToDouble(Console.ReadLine());
+
+            primeiroNumero=InformeValor("Digite o primeiro número: ");
+
+            segundoNumero = InformeValor("Digite o segundo número: ");
+        }
+
+        private static double InformeValor(string mensagem)
+        {
+            double numero;
+
+            Console.Write(mensagem);
+
+            bool conversaoRealizada = Double.TryParse(Console.ReadLine(), out numero);
+
+            if (conversaoRealizada)
+                return numero;
+
+            Console.WriteLine("\nApenas um valor numérico deve ser informado\n");
+
+            return InformeValor(mensagem);
         }
 
         private static void VisualizarOperacoes(List<string> calculos)
